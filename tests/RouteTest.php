@@ -6,7 +6,6 @@ namespace Devly\WP\Rest\Tests;
 
 use Closure;
 use Devly\DI\Container;
-use Devly\WP\Rest\Helper;
 use Devly\WP\Rest\Route;
 use WP_REST_Request;
 use WP_REST_Server;
@@ -36,19 +35,6 @@ class RouteTest extends WP_UnitTestCase
         parent::tearDown();
 
         $GLOBALS['wp_rest_server'] = null;
-    }
-
-    public function testProcessPattern(): void
-    {
-        $this->assertEquals('/author/(?P<username>\w+)', Helper::processPattern('/author/{username:w}'));
-        $this->assertEquals('/author/(?P<username>[A-Za-z0-9]+)', Helper::processPattern('/author/{username:alnum}'));
-        $this->assertEquals('/author/(?P<username>[A-Za-z]+)', Helper::processPattern('/author/{username:a}'));
-        $this->assertEquals('/author/(?P<id>\d+)', Helper::processPattern('/author/{id:d}'));
-        $this->assertEquals('/author/(?P<username>[-\w]+)', Helper::processPattern('/author/{username}'));
-        $this->assertEquals(
-            '/author/(?P<username>@[a-zA-Z]+)',
-            Helper::processPattern('/author/{username:@[a-zA-Z]+}')
-        );
     }
 
     public function testPermissionsValidationFailure(): void
