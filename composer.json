@@ -1,0 +1,51 @@
+{
+  "name": "devly/wp-rest-router",
+  "description": "A fluent router for registering and managing WordPress REST API routes & endpoints in an OOP way.",
+  "type": "wp-plugin",
+  "authors": [
+    {
+      "name": "Valentin Jebelev",
+      "website": "https://github.com/valenjeb",
+      "role": "developer"
+    }
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Devly\\WP\\Rest\\": "src/"
+    },
+    "files": ["src/functions.php"]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Devly\\WP\\Rest\\Tests\\": "tests"
+    }
+  },
+  "require": {
+    "php": "^7.4",
+    "devly/php-di": "dev-master",
+    "devly/utils": "dev-master"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+    "devly/coding-standard": "^1.0",
+    "phpstan/phpstan": "^1.9",
+    "phpunit/phpunit": "^9.5",
+    "szepeviktor/phpstan-wordpress": "^1.1",
+    "yoast/phpunit-polyfills": "^1.0"
+  },
+  "scripts": {
+    "lint": "@php ./vendor/bin/phpcs",
+    "lint:fix": "@php ./vendor/bin/phpcbf",
+    "analyze": "@php ./vendor/bin/phpstan",
+    "test": "@php ./vendor/bin/phpunit --testdox --colors=always"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
