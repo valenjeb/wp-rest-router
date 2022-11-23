@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Devly\WP\Rest;
 
 use Devly\DI\Contracts\IContainer;
+use Devly\Utils\Path;
 use Devly\Utils\Pipeline;
 use Devly\WP\Rest\Concerns\HasMiddleware;
 use WP_REST_Request;
@@ -35,7 +36,7 @@ class Route
     public function __construct(string $method, string $pattern, $controller)
     {
         $this->methods    = $method;
-        $this->pattern    = Helper::processPattern($pattern);
+        $this->pattern    = Path::processPattern($pattern);
         $this->controller = $controller;
     }
 

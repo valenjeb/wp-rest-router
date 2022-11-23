@@ -89,12 +89,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/valenjeb/php-utils.git",
-                "reference": "d96ecb3430d07922f210c6e1836025f5b9ae6562"
+                "reference": "e92b41614f23985ae3ab0aa2dd0399c05da99b2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valenjeb/php-utils/zipball/d96ecb3430d07922f210c6e1836025f5b9ae6562",
-                "reference": "d96ecb3430d07922f210c6e1836025f5b9ae6562",
+                "url": "https://api.github.com/repos/valenjeb/php-utils/zipball/e92b41614f23985ae3ab0aa2dd0399c05da99b2b",
+                "reference": "e92b41614f23985ae3ab0aa2dd0399c05da99b2b",
                 "shasum": ""
             },
             "require": {
@@ -123,7 +123,7 @@
                 "issues": "https://github.com/valenjeb/php-utils/issues",
                 "source": "https://github.com/valenjeb/php-utils/tree/master"
             },
-            "time": "2022-11-23T18:46:56+00:00"
+            "time": "2022-11-23T22:14:11+00:00"
         },
         {
             "name": "voku/portable-ascii",
