@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1fd4905b80709c87cb3e2112ed9b07a8",
+    "content-hash": "ed4de478d915943cc1a536548718e00e",
     "packages": [
         {
             "name": "devly/php-di",
@@ -646,6 +646,46 @@
                 "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.1.0"
             },
             "time": "2022-11-09T05:33:25+00:00"
+        },
+        {
+            "name": "php-stubs/wordpress-tests-stubs",
+            "version": "v6.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-stubs/wordpress-tests-stubs.git",
+                "reference": "c1d67daef0dc00ab6d7619571dacfd48a3237331"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-tests-stubs/zipball/c1d67daef0dc00ab6d7619571dacfd48a3237331",
+                "reference": "c1d67daef0dc00ab6d7619571dacfd48a3237331",
+                "shasum": ""
+            },
+            "require-dev": {
+                "php": "~7.3 || ~8.0",
+                "php-stubs/generator": "^0.8.0"
+            },
+            "suggest": {
+                "symfony/polyfill-php73": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "WordPress Tests function and class declaration stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/wordpress-tests-stubs",
+            "keywords": [
+                "PHPStan",
+                "static analysis",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/php-stubs/wordpress-tests-stubs/issues",
+                "source": "https://github.com/php-stubs/wordpress-tests-stubs/tree/v6.1.1"
+            },
+            "time": "2022-11-27T12:05:12+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
