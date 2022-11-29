@@ -5,22 +5,23 @@ declare(strict_types=1);
 namespace Devly\WP\Rest;
 
 use Devly\DI\Contracts\IContainer;
-use Devly\Utils\Path;
 use Devly\Utils\Pipeline;
 use Devly\WP\Rest\Concerns\HasMiddleware;
+use Devly\WP\Rest\Concerns\HasPattern;
 use WP_REST_Request;
 
 use function explode;
 use function is_array;
 use function is_callable;
 use function is_string;
-use function rand;
-use function strlen;
+use function md5;
 use function strpos;
+use function substr;
 
 class Route
 {
     use HasMiddleware;
+    use HasPattern;
 
     protected string $methods;
     protected string $pattern;
@@ -36,7 +37,7 @@ class Route
     public function __construct(string $method, string $pattern, $controller)
     {
         $this->methods    = $method;
-        $this->pattern    = Path::processPattern($pattern);
+        $this->pattern    = $this->processPattern($pattern);
         $this->controller = $controller;
     }
 
@@ -53,22 +54,12 @@ class Route
             return $this->name;
         }
 
-        $this->name = $this->generateRandomName();
-
-        return $this->name;
+        return $this->name = $this->generateUniqueRouteID($this->pattern);
     }
 
-    protected function generateRandomName(int $length = 6): string
+    protected function generateUniqueRouteID(string $pattern): string
     {
-        $chars      = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charlength = strlen($chars);
-        $str        = '';
-
-        for ($i = 0; $i < $length; $i++) {
-            $str .= $chars[rand(0, $charlength - 1)];
-        }
-
-        return $str;
+        return substr(md5($pattern), 0, 6);
     }
 
     public function register(string $namespace, IContainer $container): void
