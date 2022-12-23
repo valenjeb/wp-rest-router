@@ -6,6 +6,11 @@ namespace Devly\WP\Rest\Concerns;
 
 use Devly\Utils\Str;
 
+use function explode;
+use function preg_match_all;
+use function sprintf;
+use function str_replace;
+
 trait HasPattern
 {
     protected string $paramRegex = '/(\{[a-zA-Z_\-]+(:.*)?})/';
