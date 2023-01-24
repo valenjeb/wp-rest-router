@@ -22,7 +22,7 @@
   },
   "require": {
     "php": "^7.4",
-    "devly/php-di": "dev-master",
+    "devly/php-di": "^0.2",
     "devly/utils": "dev-master"
   },
   "require-dev": {
