@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3255a6367adf026279545632633c980f",
+    "content-hash": "f479051f44b8df78c1a61fcddbd7ad71",
     "packages": [
         {
             "name": "devly/php-di",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valenjeb/php-di.git",
-                "reference": "04b37b83d36d9e5c76b44eb1ee3d6b7104aa7c69"
+                "reference": "0d3428896198267a24f4d4d89364ecd6f363642a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valenjeb/php-di/zipball/04b37b83d36d9e5c76b44eb1ee3d6b7104aa7c69",
-                "reference": "04b37b83d36d9e5c76b44eb1ee3d6b7104aa7c69",
+                "url": "https://api.github.com/repos/valenjeb/php-di/zipball/0d3428896198267a24f4d4d89364ecd6f363642a",
+                "reference": "0d3428896198267a24f4d4d89364ecd6f363642a",
                 "shasum": ""
             },
             "require": {
@@ -40,9 +40,9 @@
             "description": "PHP dependency injection container",
             "support": {
                 "issues": "https://github.com/valenjeb/php-di/issues",
-                "source": "https://github.com/valenjeb/php-di/tree/0.3.0"
+                "source": "https://github.com/valenjeb/php-di/tree/0.4.0"
             },
-            "time": "2023-05-15T12:17:31+00:00"
+            "time": "2023-05-29T09:43:33+00:00"
         },
         {
             "name": "devly/repository",
